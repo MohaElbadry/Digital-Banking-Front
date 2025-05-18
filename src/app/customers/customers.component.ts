@@ -6,8 +6,6 @@ import {Customer} from '../model/customer.model';
 
 @Component({
   selector: 'app-customers',
-  standalone: false,
-  templateUrl: './customers.component.html',
   styleUrl: './customers.component.css'
 })
 export class CustomersComponent implements OnInit{
@@ -22,5 +20,8 @@ export class CustomersComponent implements OnInit{
         return throwError(err);
       })
     );
+
+
+
   }
 }
