@@ -1,29 +1,30 @@
-<div class="login-container">
+<div class="mb-5">
   <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-11 col-lg-9">
       <div class="card login-card shadow">
         <div class="card-header bg-primary text-white">
           <h4 class="mb-0 text-center">Digital Banking Login</h4>
         </div>
         <div class="card-body">
-          <div class="text-center mb-4">
-            <i class="bi bi-bank fs-1 text-primary"></i>
+          <div class="text-center mb-5">
+            <i class="bi bi-bank fs-1 text-primary" style="font-size: 3rem !important;"></i>
           </div>
           <div class="alert alert-danger" *ngIf="errorMessage">
             {{errorMessage}}
           </div>
           <form [formGroup]="formLogin" (ngSubmit)="handleLogin()">
-            <div class="mb-3">
+            <div class="mb-4">
               <label class="form-label">Username</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-person"></i></span>
                 <input type="text" class="form-control" formControlName="username" placeholder="Enter your username">
               </div>
-              <div class="text-danger" *ngIf="formLogin.get('username')?.errors && formLogin.get('username')?.touched">
+              <div class="text-danger mt-2"
+                *ngIf="formLogin.get('username')?.errors && formLogin.get('username')?.touched">
                 <small *ngIf="formLogin.get('username')?.errors?.['required']">Username is required</small>
               </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-5">
               <label class="form-label">Password</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-lock"></i></span>

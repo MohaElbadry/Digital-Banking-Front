@@ -1,9 +1,10 @@
 .login-container {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  max-width: 100%;
 }
 
 .login-card {
@@ -13,22 +14,41 @@
 }
 
 .login-card .card-header {
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: none;
 }
 
+.login-card .card-header h4 {
+  font-size: 1.8rem;
+}
+
 .login-card .card-body {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .input-group-text {
   background-color: #f8f9fa;
+  font-size: 1.1rem;
+}
+
+.form-control {
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  height: auto;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .btn-primary {
   background-color: #0d6efd;
   border-color: #0d6efd;
-  padding: 0.6rem;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .btn-primary:hover {
@@ -36,6 +56,46 @@
   border-color: #0a58ca;
 }
 
+.btn-outline-secondary {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+}
+
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Additional styles for larger form */
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.card-body .bi-bank {
+  font-size: 4rem !important;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.form-control,
+.input-group-text {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.alert {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.text-danger {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
 }

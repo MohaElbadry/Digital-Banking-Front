@@ -39,24 +39,10 @@
 					</div>
 				</div>
 
-				<div class="col-md-6">
-					<label class="form-label">Phone</label>
-					<input type="tel" formControlName="phone" class="form-control">
-				</div>
 
-				<div class="col-md-6">
-					<label class="form-label">Status</label>
-					<select formControlName="status" class="form-select">
-						<option value="ACTIVE">Active</option>
-						<option value="INACTIVE">Inactive</option>
-						<option value="PENDING">Pending</option>
-					</select>
-				</div>
+				
 
-				<div class="col-12">
-					<label class="form-label">Address</label>
-					<textarea formControlName="address" class="form-control" rows="3"></textarea>
-				</div>
+				
 
 				<div class="col-12 mt-4">
 					<button type="submit" [disabled]="editCustomerFormGroup.invalid || isLoading"
