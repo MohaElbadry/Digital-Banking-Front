@@ -1,0 +1,38 @@
+.page-title {
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-group .btn {
+  transition: all 0.2s ease;
+  margin: 0 1px;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.35em 0.65em;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.05) !important;
+}
+
+.input-group .form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  z-index: 3;
+}

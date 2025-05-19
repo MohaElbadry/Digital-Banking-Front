@@ -1,61 +1,125 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {CustomerService} from '../services/customer.service';
-import {catchError, map, Observable, throwError} from 'rxjs';
-import {Customer} from '../model/customer.model';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { CustomerService } from '../services/customer.service';
+import { catchError, map, Observable, throwError } from 'rxjs';
+import { Customer } from '../model/customer.model';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customers',
   standalone: false,
   templateUrl: './customers.component.html',
-  styleUrl: './customers.component.css'
+  styleUrls: ['./customers.component.css'],
 })
-export class CustomersComponent implements OnInit{
-  customers! : Observable<Array<Customer>>;
-  errorMessage! : string;
-  searchFormGroup : FormGroup | undefined;
-  constructor(private customerService : CustomerService, private fb : FormBuilder) {}
+export class CustomersComponent implements OnInit {
+  customers!: Observable<Array<Customer>>;
+  errorMessage!: string;
+  searchFormGroup: FormGroup | undefined;
+  isLoading: boolean = true;
+
+  constructor(
+    private customerService: CustomerService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.searchFormGroup=this.fb.group({
-      keyword : this.fb.control("")
+    this.searchFormGroup = this.fb.group({
+      keyword: this.fb.control(''),
     });
-    this.customers=this.customerService.getCustomer().pipe(
-      catchError(err => {
-        this.errorMessage=err.message;
-        return throwError(err);
+    this.loadCustomers();
+  }
+
+  loadCustomers() {
+    this.isLoading = true;
+    this.errorMessage = '';
+
+    this.customers = this.customerService.getCustomer().pipe(
+      catchError((err) => {
+        this.errorMessage =
+          err.message || 'An error occurred while loading customers';
+        this.isLoading = false;
+        return throwError(() => err);
       })
     );
+
+    this.customers.subscribe(() => {
+      this.isLoading = false;
+    });
   }
 
   handleSearchCustomers() {
-    let kw=this.searchFormGroup?.value.keyword;
-    this.customers=this.customerService.searchCustomer(kw).pipe(
-      catchError(err => {
-        this.errorMessage=err.message;
-        return throwError(err);
+    const kw = this.searchFormGroup?.value.keyword?.trim();
+
+    if (!kw) {
+      this.loadCustomers();
+      return;
+    }
+
+    this.isLoading = true;
+    this.errorMessage = '';
+
+    this.customers = this.customerService.searchCustomer(kw).pipe(
+      catchError((err) => {
+        this.errorMessage = err.message || 'An error occurred during search';
+        this.isLoading = false;
+        return throwError(() => err);
       })
     );
+
+    this.customers.subscribe(() => {
+      this.isLoading = false;
+    });
+  }
+
+  resetSearch() {
+    this.searchFormGroup?.patchValue({ keyword: '' });
+    this.loadCustomers();
+  }
+
+  getStatusBadgeClass(customer: Customer) {
+    switch (customer.status) {
+      case 'ACTIVE':
+        return 'bg-success';
+      case 'INACTIVE':
+        return 'bg-danger';
+      case 'PENDING':
+        return 'bg-warning';
+      default:
+        return 'bg-success'; // Default to active
+    }
+  }
+
+  handleEditCustomer(customer: Customer) {
+    // Navigate to the edit customer page
+    this.router.navigate(['/edit-customer', customer.id]);
   }
 
   handleDeleteCustomer(c: Customer) {
-    let conf = confirm("Are you sure to delete this customer?");
+    const conf = confirm(
+      `Are you sure you want to delete customer "${c.name}"?`
+    );
     if (!conf) return;
+
     this.customerService.deleteCustomer(c.id).subscribe({
-      next : (resp)=>{
-        this.customers=this.customers.pipe(
-          map(data=>{
-            let index=data.indexOf(c);
-            data.slice(index,1)
+      next: (resp) => {
+        this.customers = this.customers.pipe(
+          map((data) => {
+            const index = data.indexOf(c);
+            if (index !== -1) {
+              data.splice(index, 1);
+            }
             return data;
           })
         );
+        // Show success message
+        alert(`Customer "${c.name}" was deleted successfully.`);
       },
-      error : err => {
-        console.log(err);
-    }
+      error: (err) => {
+        console.error(err);
+        this.errorMessage = 'Failed to delete customer. Please try again.';
+      },
     });
-
   }
 }

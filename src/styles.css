@@ -1,2 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --primary-color: #0d6efd;
+  --light-bg: #f5f7fa;
+  --dark-bg: #343a40;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-bg);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  padding-top: 60px;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.card-header {
+  font-weight: 500;
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+}
+
+/* Custom classes for angular components */
+.content-container {
+  padding-top: 1.5rem;
+}
+
+.page-title {
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+/* Table styles */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.table thead tr th {
+  background-color: var(--light-bg);
+  font-weight: 500;
+}
+
+/* Form styles */
+.form-control:focus,
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Icons in forms and tables */
+.bi {
+  margin-right: 0.25rem;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
