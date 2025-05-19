@@ -192,10 +192,6 @@ To deploy the application to a production server:
 
 2. Deploy the contents of the `dist/digital-banking-frontend/browser` directory to your web server
 
-## Author
-
-- Your Name - [GitHub Profile](https://github.com/yourusername)
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
