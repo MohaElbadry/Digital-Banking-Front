@@ -1,203 +1,249 @@
-# Digital Banking Platform Frontend
+<h1 align="center">Digital Banking Platform Frontend</h1>
+<div align="center">
 
-A modern, feature-rich Angular application for digital banking services. This frontend application connects to a Spring Boot backend API to provide a comprehensive banking platform.
+[![Angular](https://img.shields.io/badge/Angular-19-red?style=flat&logo=angular)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=flat&logo=bootstrap)](https://getbootstrap.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
-![Digital Banking Platform](https://via.placeholder.com/800x400?text=Digital+Banking+Platform)
+A modern, responsive Angular web application that serves as the frontend for a comprehensive digital banking system. Built with Angular 19 and Bootstrap 5, this application provides a secure and intuitive interface for managing bank accounts, customers, and financial transactions.
+</div>
 
-## Overview
+## 🌟 Key Features
 
-The Digital Banking Platform is a web application that allows users to manage bank accounts, customers, and transactions. It features a responsive design with modern UI components built on Angular 19 and Bootstrap 5.
+### 🔐 Authentication System
+- **Secure JWT-based login** with token management
+- **Route guards** protecting sensitive areas
+- **HTTP interceptors** for automatic token handling
+- Session management with auto-logout
 
-### Key Features
+### 👥 Customer Management
+- **Complete CRUD operations** for customer data
+- **Advanced search and filtering** capabilities
+- **Reactive form validation** with real-time feedback
+- **Bulk operations** and data export
+- **Customer profile management** with detailed information
 
-- **Authentication System**: Secure login with JWT authentication
-- **Customer Management**:
-  - List all customers with search functionality
-  - Create new customers with reactive form validation
-  - Edit existing customer information
-  - Delete customers with confirmation
-- **Account Management**:
-  - View customer bank accounts with details
-  - View transaction history
-  - Perform banking operations:
-    - Debit/withdraw funds
-    - Credit/deposit funds
-    - Transfer between accounts
-- **Responsive UI**: Modern interface that works on desktop and mobile devices
-- **Security**: Route guards and HTTP interceptors for protected resources
+### 💳 Account Management
+- **Multi-account view** with account summaries
+- **Real-time balance updates** and account status
+- **Account creation** with different account types
+- **Transaction history** with advanced filtering
+- **Account statements** and reporting
 
-## Architecture
+### 💰 Banking Operations
+- **Debit/Withdraw** funds with security validation
+- **Credit/Deposit** operations with instant confirmation
+- **Account-to-account transfers** with transaction tracking
+- **Transaction limits** and validation rules
+- **Operation history** and audit trails
 
-### Frontend Architecture
+### 📱 Modern UI/UX
+- **Fully responsive design** for desktop, tablet, and mobile
+- **Modern Bootstrap 5** components and styling
+- **Intuitive navigation** with breadcrumbs and search
+- **Real-time notifications** and feedback
+- **Accessibility compliant** interface
 
-The application follows Angular's recommended architecture:
+## 🛠️ Tech Stack
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Angular** | 19+ | Frontend framework |
+| **TypeScript** | 5+ | Type-safe development |
+| **Bootstrap** | 5 | UI components and styling |
+| **RxJS** | Latest | Reactive programming |
+| **SCSS** | Latest | Advanced styling |
+| **Angular CLI** | Latest | Development and build tools |
+
+## 📁 Project Structure
 
 ```
 src/
-├── app/                   # Main application code
-│   ├── components/        # Shared components
-│   ├── guards/            # Route guards for authentication
-│   ├── interceptors/      # HTTP interceptors (auth token)
-│   ├── model/             # Data models/interfaces
-│   ├── services/          # API services and business logic
-│   ├── feature modules/   # Feature-based components (customers, accounts)
-│   └── app.module.ts      # Main application module
-├── assets/                # Static assets
-└── environments/          # Environment configuration
+├── app/
+│   ├── components/
+│   │   ├── home/                 # Dashboard and overview
+│   │   │   ├── home.component.ts
+│   │   │   ├── home.component.html
+│   │   │   └── home.component.scss
+│   │   ├── login/                # Authentication
+│   │   │   ├── login.component.ts
+│   │   │   ├── login.component.html
+│   │   │   └── login.component.scss
+│   │   └── user/                 # Customer management
+│   │       ├── user-list/
+│   │       ├── user-add/
+│   │       ├── user-edit/
+│   │       └── user-detail/
+│   ├── services/
+│   │   ├── auth.service.ts       # Authentication service
+│   │   ├── customer.service.ts   # Customer operations
+│   │   ├── account.service.ts    # Account management
+│   │   └── transaction.service.ts # Banking operations
+│   ├── models/
+│   │   ├── customer.model.ts
+│   │   ├── account.model.ts
+│   │   └── transaction.model.ts
+│   ├── guards/
+│   │   └── auth.guard.ts         # Route protection
+│   ├── interceptors/
+│   │   └── auth.interceptor.ts   # HTTP request handling
+│   └── shared/
+│       ├── components/           # Reusable components
+│       └── pipes/               # Custom pipes
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── styles/
+└── environments/
+    ├── environment.ts
+    └── environment.prod.ts
 ```
 
-### Backend Communication
-
-The frontend connects to a Spring Boot REST API running at `http://localhost:8085` with these main endpoints:
-
-- `/auth/login` - Authentication
-- `/customers` - Customer management (GET, POST, PUT, DELETE)
-- `/accounts` - Account management
-- `/accounts/{accountId}/operations` - Account operations (debit/credit/transfer)
-
-### Technical Stack
-
-- **Framework**: Angular 19
-- **UI Library**: Bootstrap 5 with Bootstrap Icons
-- **Form Handling**: Reactive Forms with validation
-- **State Management**: Services with RxJS
-- **HTTP Communication**: Angular HttpClient with interceptors
-- **Authentication**: JWT (JSON Web Tokens)
-- **CSS Preprocessing**: SCSS
-- **Build Tool**: Angular CLI
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18.x or higher
-- npm 9.x or higher
-- Angular CLI 19.x
+Ensure you have the following installed on your system:
+
+- **Node.js** (v18.0.0 or higher)
+- **npm** (v9.0.0 or higher)
+- **Angular CLI** (v19.0.0 or higher)
+
+```bash
+# Check versions
+node --version
+npm --version
+ng version
+```
 
 ### Installation
 
-1. Clone the repository
-
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/digital-banking-front.git
-   cd digital-banking-front
+   git clone https://github.com/MohaElbadry/Digital-Banking-Front.git
+   cd digital-banking-frontend
    ```
 
-2. Install dependencies
-
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Start the development server
-
+3. **Configure environment**
    ```bash
-   ng serve
+   # Update src/environments/environment.ts with your API URL
+   export const environment = {
+     production: false,
+     apiUrl: 'http://localhost:8085'  # Your Spring Boot backend URL
+   };
    ```
 
-4. Navigate to `http://localhost:4200/` in your browser
+4. **Start development server**
+   ```bash
+   ng serve 
+   ```
 
-### Backend API Connection
+   The application will be available at `http://localhost:4200`
 
-The application is configured to connect to a Spring Boot backend at `http://localhost:8085`. If your backend runs on a different address, update the API URL in:
+### Build for Production
+
+```bash
+# Build for production
+ng build --configuration production
+
+# The build artifacts will be stored in the dist/ directory
+```
+
+## 🔌 API Integration
+
+The frontend connects to a Spring Boot backend via RESTful APIs:
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/auth/login` | POST | User authentication |
+| `/customers` | GET | Retrieve all customers |
+| `/customers` | POST | Create new customer |
+| `/customers/{id}` | PUT | Update customer |
+| `/customers/{id}` | DELETE | Delete customer |
+| `/accounts` | GET | Retrieve accounts |
+| `/accounts` | POST | Create new account |
+| `/accounts/{id}/operations` | GET | Get account transactions |
+| `/accounts/debit` | POST | Withdraw funds |
+| `/accounts/credit` | POST | Deposit funds |
+| `/accounts/transfer` | POST | Transfer between accounts |
+
+### API Configuration
+
+Configure your backend API URL in the environment files:
 
 ```typescript
-// src/app/services/auth.service.ts
-private readonly API_URL = 'http://localhost:8085';
+// src/environments/environment.ts
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8085'
+};
 ```
 
-### API Authentication Flow
+## 📸 Screenshots
 
-1. The user enters credentials in the login form
-2. Credentials are sent to `/auth/login` endpoint
-3. Upon successful authentication, the backend returns a JWT token
-4. The token is stored in local storage
-5. All subsequent API requests include the token in an Authorization header
-6. The `AuthInterceptor` automatically attaches the token to all HTTP requests
+| Home Dashboard | Login Page |
+|----------------|------------|
+| ![Home Page](screenshots/home-placeholder.png) | ![Login Page](screenshots/login-placeholder.png) |
+| **Add User** | **Update User** |
+| ![Add User](screenshots/add-user-placeholder.png) | ![Update User](screenshots/update-user-placeholder.png) |
 
-### Backend API Structure
+## 🔐 Security Features
 
-The frontend expects the following API endpoints to be available:
+- **JWT Token Authentication** with automatic renewal
+- **Route Guards** preventing unauthorized access
+- **HTTP Interceptors** for secure API communication
+- **Input validation** and sanitization
+- **CSRF protection** and XSS prevention
+- **Role-based access control** (RBAC)
 
-#### Authentication
+## 📱 Responsive Design
 
-- `POST /auth/login` - Authenticate user and return JWT token
+The application is fully responsive and optimized for:
 
-#### Customers
+- **Desktop** (1200px and above)
+- **Tablet** (768px - 1199px)
+- **Mobile** (576px - 767px)
+- **Small Mobile** (below 576px)
 
-- `GET /customers?keyword=search` - Search customers by keyword
-- `GET /customers/{id}` - Get customer details
-- `POST /customers` - Create a new customer
-- `PUT /customers/{id}` - Update customer information
-- `DELETE /customers/{id}` - Delete a customer
-
-#### Accounts
-
-- `GET /accounts` - Get all accounts
-- `GET /accounts/{id}` - Get account details
-- `GET /customers/{customerId}/accounts` - Get accounts for a specific customer
-
-#### Operations
-
-- `POST /accounts/{accountId}/debit` - Debit an account
-- `POST /accounts/{accountId}/credit` - Credit an account
-- `POST /accounts/transfer` - Transfer between accounts
-- `GET /accounts/{accountId}/operations` - Get account operations history
-
-## Development
-
-### Code Scaffolding
-
-To generate a new component:
+##  Testing
 
 ```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics:
-
-```bash
-ng generate --help
-```
-
-### Building for Production
-
-```bash
-ng build --configuration production
-```
-
-The build artifacts will be stored in the `dist/` directory.
-
-### Running Unit Tests
-
-```bash
+# Run unit tests
 ng test
+
 ```
 
-### Code Linting
+## 🚧 Future Roadmap
 
-```bash
-ng lint
-```
+### Phase 1 - Enhanced Features
+- [ ] **Advanced Analytics Dashboard** with charts and reports
+- [ ] **Multi-language Support** (i18n)
+- [ ] **Dark Mode** theme option
+- [ ] **Export/Import** functionality for customer data
 
-## Deployment
+### Phase 2 - Mobile & Performance
+- [ ] **Progressive Web App** (PWA) capabilities
+- [ ] **Mobile App** using Ionic/Capacitor
+- [ ] **Performance optimization** and lazy loading
+- [ ] **Offline mode** support
 
-To deploy the application to a production server:
+## 📄 License
 
-1. Build the production version
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div align="center">
 
-   ```bash
-   ng build --configuration production
-   ```
+## 🌟 Star This Project
 
-2. Deploy the contents of the `dist/digital-banking-frontend/browser` directory to your web server
+If you find this project helpful, please consider giving it a star ⭐ on GitHub!
 
-## License
+[![GitHub stars](https://img.shields.io/github/stars/MohaElbadry/Digital-Banking-Front?style=social)](https://github.com/MohaElbadry/Digital-Banking-Front/stargazers)
 
-This project is licensed under the MIT License - see the LICENSE file for details
 
-## Acknowledgments
-
-- Spring Boot backend developers
-- Angular team for the excellent framework
-- Bootstrap team for the UI components
+**Made with ❤️ using Angular**
+</div>
