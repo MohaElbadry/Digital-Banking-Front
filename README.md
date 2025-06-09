@@ -192,9 +192,9 @@ export const environment = {
 
 | Home Dashboard | Login Page |
 |----------------|------------|
-| ![Home Page](screenshots/home-placeholder.png) | ![Login Page](![Uploading image.png…]()) |
+| ![Home Page](https://private-user-images.githubusercontent.com/92531732/452831031-50fb9de4-a995-4e8d-8ef6-19cf1737c080.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0Mjk2OTMsIm5iZiI6MTc0OTQyOTM5MywicGF0aCI6Ii85MjUzMTczMi80NTI4MzEwMzEtNTBmYjlkZTQtYTk5NS00ZThkLThlZjYtMTljZjE3MzdjMDgwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDAwMzYzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJmOGJkMjk3MmEzMDBiMGNiNGM4NDI2ZGM2NzYzYzE0NzcyZGEwZDI0ZTE1NGU2Y2IxZDkxN2Y1NmRiNWEwYWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hBL1E5gyqvud-ZHDd02FPdxzquQVZJuIltxfN845BhU) | ![Login Page](https://private-user-images.githubusercontent.com/92531732/452830660-6c77b61e-59f4-42e2-b9e1-f9d19c831fd0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0Mjk2OTMsIm5iZiI6MTc0OTQyOTM5MywicGF0aCI6Ii85MjUzMTczMi80NTI4MzA2NjAtNmM3N2I2MWUtNTlmNC00MmUyLWI5ZTEtZjlkMTljODMxZmQwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDAwMzYzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiMDkyY2QyYmU5NGI0MDkyNGNjNGMyMDExZDFmYzBjYzE5NzU1YmFkMjdmZGExMzMyMWI4ZDBhYTI0ZmQ5MjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.zwRNiFWdnOeWW8B5Jyh6vjX2z9sO1kOxPVLTuBVLlOc) |
 | **Add User** | **Update User** |
-| ![Add User](screenshots/add-user-placeholder.png) | ![Update User](screenshots/update-user-placeholder.png) |
+| ![Add User](https://private-user-images.githubusercontent.com/92531732/452831134-f7ae8701-3099-47b0-8184-c3bea69af420.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0Mjk2OTMsIm5iZiI6MTc0OTQyOTM5MywicGF0aCI6Ii85MjUzMTczMi80NTI4MzExMzQtZjdhZTg3MDEtMzA5OS00N2IwLTgxODQtYzNiZWE2OWFmNDIwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDAwMzYzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJiNGZjYWE0NzU5NGYwY2U3NmRiMGUwMTYxN2ZiYzAwZmZlYWFkNmJjYTAwNTY2NWU1YWRmNjE5ZjAwOWNmNjgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.bDFuYobig1AexRDrsC5GCrM2CNq50SbpImiCRIA2tqk) | ![Update User](https://private-user-images.githubusercontent.com/92531732/452831146-bb816651-a308-4efb-99bd-0ff09427c57b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0Mjk2OTMsIm5iZiI6MTc0OTQyOTM5MywicGF0aCI6Ii85MjUzMTczMi80NTI4MzExNDYtYmI4MTY2NTEtYTMwOC00ZWZiLTk5YmQtMGZmMDk0MjdjNTdiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDAwMzYzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJmNzA0MjVmYWZkYzhkY2MyNmE1Yzk1NWZmN2RiNTcyMTA3NzNiMzIwMDMwNWQxYzk1ZDRjNDQxZjBjMzI0YTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.beIk4nbw5R1G1errfN6H50LCWEfw97PX9avisCpDStg) |
 
 ## 🔐 Security Features
 
@@ -204,15 +204,6 @@ export const environment = {
 - **Input validation** and sanitization
 - **CSRF protection** and XSS prevention
 - **Role-based access control** (RBAC)
-
-## 📱 Responsive Design
-
-The application is fully responsive and optimized for:
-
-- **Desktop** (1200px and above)
-- **Tablet** (768px - 1199px)
-- **Mobile** (576px - 767px)
-- **Small Mobile** (below 576px)
 
 ##  Testing
 
