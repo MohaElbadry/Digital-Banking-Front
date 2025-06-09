@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://img.icons8.com/?size=100&id=NdeIzskkIm2U&format=png&color=000000" alt="Digital Banking" width="120" height="120">
+</p>
 <h1 align="center">Digital Banking Platform Frontend</h1>
 <div align="center">
 
@@ -189,7 +192,7 @@ export const environment = {
 
 | Home Dashboard | Login Page |
 |----------------|------------|
-| ![Home Page](screenshots/home-placeholder.png) | ![Login Page](screenshots/login-placeholder.png) |
+| ![Home Page](screenshots/home-placeholder.png) | ![Login Page](![Uploading image.png…]()) |
 | **Add User** | **Update User** |
 | ![Add User](screenshots/add-user-placeholder.png) | ![Update User](screenshots/update-user-placeholder.png) |
 
